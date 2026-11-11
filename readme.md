@@ -194,7 +194,7 @@ Tabel berikut menunjukkan citra input asli dan tahapan ekstraksi komponen fisis 
 | Citra Input Asli | Dark Channel Prior | Peta Transmisi Kasar (Raw) | Peta Transmisi Halus (Refined) | 
 | ----- | ----- | ----- | ----- | 
 |  |  |  |  | 
-| *Citra berkabut asap pekat* | *Deteksi area kabut (berwarna terang)* | *Peta transmisi awal (masih berkotak)* | *Peta transmisi halus (Guided Filter)* | 
+| ![Citra berkabut asap pekat](hazy_outdoor.jpeg) | ![Deteksi area kabut (berwarna terang)](result_darkch.png) | ![Peta transmisi awal (masih berkotak)](result_transmission_raw.png) | ![Peta transmisi halus (Guided Filter)](result_transmission_refined) | 
 
 * **Dark Channel**: Area berkabut tebal di sekitar jalan dan pepohonan terdeteksi dengan intensitas terang, sedangkan area dedaunan dan aspal bebas kabut bernilai mendekati nol (gelap).
 
@@ -207,7 +207,7 @@ Tabel visual berikut memperlihatkan perbandingan langsung antara kondisi awal se
 | Citra Asli (Hazy Input) | Hasil DCP Default (Baseline) | Hasil DCP Best Parameter (Optimal) | 
 | ----- | ----- | ----- | 
 |  |  |  | 
-| *Kondisi awal berkabut asap* | *`patch_size` = 15,* $\omega$ *= 0,95,* $r$ *= 60* | *`patch_size` = 10,* $\omega$ *= 1,00,* $r$ *= 20* | 
+| ![Kondisi awal berkabut asap](hazy_outdoor.jpeg) | *`patch_size` = 15,* $\omega$ *= 0,95,* $r$ *= 60* | *`patch_size` = 10,* $\omega$ *= 1,00,* $r$ *= 20* | 
 
 ### 3. Evaluasi Kuantitatif Pemulihan Citra
 
