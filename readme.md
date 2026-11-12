@@ -148,7 +148,7 @@ Karena citra uji diambil langsung di kondisi alam nyata tanpa ketersediaan citra
 
 ## Hasil Eksperimen & Galeri Visual (Outdoor Imagery)
 
-Uji coba dilakukan pada citra foto jalan luar ruangan nyata (`hazy_outdoor.jpg`) yang terdegradasi oleh kabut asap pembakaran pada area jalan, gazebo, dan pepohonan.
+Uji coba dilakukan pada citra foto jalan luar ruangan nyata (`hazy_outdoor.jpeg`) yang terdegradasi oleh kabut asap pembakaran pada area jalan, gazebo, dan pepohonan.
 
 ### 1. Tahapan Pembentukan Dark Channel & Peta Transmisi
 
@@ -156,7 +156,7 @@ Tabel berikut menunjukkan citra input asli dan tahapan ekstraksi komponen fisis 
 
 | Citra Input Asli | Dark Channel Prior | Peta Transmisi Kasar (Raw) | Peta Transmisi Halus (Refined) |
 | ----- | ----- | ----- | ----- |
-| ![Citra berkabut asap pekat](hazy_outdoor.jpg) | ![Deteksi area kabut (berwarna terang)](results/result_darkch.png) | ![Peta transmisi awal (masih berkotak)](results/result_transmission_raw.png) | ![Peta transmisi halus (Guided Filter)](results/result_transmission_refined.png) |
+| ![Citra berkabut asap pekat](hazy_outdoor.jpeg) | ![Deteksi area kabut (berwarna terang)](results/result_darkch.png) | ![Peta transmisi awal (masih berkotak)](results/result_transmission_raw.png) | ![Peta transmisi halus (Guided Filter)](results/result_transmission_refined.png) |
 
 * **Dark Channel**: Area berkabut tebal di sekitar jalan dan pepohonan terdeteksi dengan intensitas terang, sedangkan area dedaunan dan aspal bebas kabut bernilai mendekati nol (gelap).
 * **Transmission Map**: Peta transmisi yang telah dihaluskan (*Guided Filter*) mampu mengikuti kontur cabang pohon dan batas jalan tanpa distorsi tepi.
@@ -167,7 +167,7 @@ Tabel visual berikut memperlihatkan perbandingan langsung antara kondisi awal se
 
 | Citra Asli (Hazy Input) | Hasil DCP Default (Baseline) | Hasil DCP Best Parameter (Optimal) |
 | ----- | ----- | ----- |
-| ![Kondisi awal berkabut asap](hazy_outdoor.jpg) | ![Hasil DCP default](results/result_dcp_default.png) | ![Hasil DCP best parameter](results/result_dcp_best.png) |
+| ![Kondisi awal berkabut asap](hazy_outdoor.jpeg) | ![Hasil DCP default](results/result_dcp_default.png) | ![Hasil DCP best parameter](results/result_dcp_best.png) |
 | Tanpa pemrosesan | `patch_size` = 15, $\omega$ = 0,95, $r$ = 60 | `patch_size` = 10, $\omega$ = 1,00, $r$ = 20 |
 
 ### 3. Evaluasi Kuantitatif Pemulihan Citra
@@ -248,8 +248,8 @@ Hasil pengujian menunjukkan kontras performa yang sangat tajam antara kedua doma
 
 | Domain Citra | Kondisi | Nilai Entropy | Nilai NIQE | Estimasi Airlight ($A$) | Status Pemulihan |
 | ----- | ----- | ----- | ----- | ----- | ----- |
-| **Foto Outdoor (`hazy_outdoor.jpg`)** | Original | 7,3039 | 3,1886 | $[0,95, 0,92, 0,85]$ | **Berhasil Optimal** (Detail terangkat, NIQE membaik ke 2,80) |
-| **Foto Outdoor (`hazy_outdoor.jpg`)** | **DCP Best** | **7,3456** | **2,8025** | $[0,95, 0,92, 0,85]$ | **Berhasil Optimal** (Detail terangkat, NIQE membaik ke 2,80) |
+| **Foto Outdoor (`hazy_outdoor.jpeg`)** | Original | 7,3039 | 3,1886 | $[0,95, 0,92, 0,85]$ | **Berhasil Optimal** (Detail terangkat, NIQE membaik ke 2,80) |
+| **Foto Outdoor (`hazy_outdoor.jpeg`)** | **DCP Best** | **7,3456** | **2,8025** | $[0,95, 0,92, 0,85]$ | **Berhasil Optimal** (Detail terangkat, NIQE membaik ke 2,80) |
 | **Citra Satelit (Sentinel-2)** | Original | 6,5784 | 2,0369 | $[1,00, 1,00, 1,00]$ | **Gagal / Terlalu Gelap** (Entropy anjlok, daratan menghitam) |
 | **Citra Satelit (Sentinel-2)** | **DCP Default** | **5,8628** | **2,0487** | $[1,00, 1,00, 1,00]$ | **Gagal / Terlalu Gelap** (Entropy anjlok, daratan menghitam) |
 
@@ -276,7 +276,7 @@ Hasil pengujian menunjukkan kontras performa yang sangat tajam antara kedua doma
 │   ├── result_transmission_refined.png    # Peta transmisi setelah Guided Filter
 │   ├── result_dcp_default.png             # Hasil dehazing parameter default
 │   └── result_dcp_best.png                # Hasil dehazing parameter optimal (Best)
-├── hazy_outdoor.jpg                       # Citra input uji di root (foto outdoor berkabut)
+├── hazy_outdoor.jpeg                       # Citra input uji di root (foto outdoor berkabut)
 ├── dehaze_dcp_analysis.m                  # Skrip utama MATLAB (Pipeline, Sensitivity Analysis, Best Parameter Search)
 └── README.md                              # Dokumentasi lengkap proyek (Laporan Riset)
 ```
@@ -290,7 +290,7 @@ Hasil pengujian menunjukkan kontras performa yang sangat tajam antara kedua doma
 
 2. **Menjalankan Program**:
 
-   * Pastikan file citra `hazy_outdoor.jpg` berada di direktori yang sama dengan skrip `dehaze_dcp_analysis.m`.
+   * Pastikan file citra `hazy_outdoor.jpeg` berada di direktori yang sama dengan skrip `dehaze_dcp_analysis.m`.
    * Buka MATLAB dan jalankan skrip:
 
 ```matlab
